@@ -11,8 +11,8 @@ const movieLoad = async function loadPopularMovies() {
   main.appendChild(popularMovies);
 };
 const tvLoad = async function loadPopularTv() {
-  const popularTv = await popularTvPage();
-  main.appendChild(popularTv);
+  const popularTV = await popularTvPage();
+  main.appendChild(popularTV);
 };
 
 main.appendChild(header());

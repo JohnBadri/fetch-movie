@@ -1,6 +1,9 @@
 import './style.css';
-import { createBody } from './createBody.js';
+import { popularMoviesPage } from './popularMoviesPage.js';
 
 const main = document.querySelector('#app');
 
-main.appendChild(createBody());
+(async function loadPopularMovies() {
+  const popularMovies = await popularMoviesPage();
+  main.appendChild(popularMovies);
+})();

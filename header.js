@@ -13,7 +13,7 @@ export function header() {
 
   const links = document.createElement('ul');
   links.classList.add('links');
-  const linkTexts = ['Movies', 'TV Shows', 'Search'];
+  const linkTexts = ['Movies', 'TV Shows'];
 
   linkTexts.forEach((link) => {
     const li = document.createElement('li');

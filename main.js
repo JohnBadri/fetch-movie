@@ -1,7 +1,7 @@
 import './style.css';
 import { header } from './header.js';
 import { popularMoviesPage } from './popularMoviesPage.js';
-import { popularTvPage } from './popularTvPage';
+import { popularTvPage } from './popularTvPage.js';
 import { footer } from './footer.js';
 
 const main = document.querySelector('#app');
@@ -24,23 +24,14 @@ main.addEventListener('click', (e) => {
   if (e.target.tagName === 'LI') {
     switch (e.target.textContent) {
       case 'Movies':
-        if (contentElem) {
-          contentElem.remove();
-        }
+        contentElem.remove();
         footerElem.remove();
         movieLoad().then(() => main.appendChild(footer()));
         break;
       case 'TV Shows':
-        if (contentElem) {
-          contentElem.remove();
-        }
+        contentElem.remove();
         footerElem.remove();
         tvLoad().then(() => main.appendChild(footer()));
-        break;
-      case 'Search':
-        if (contentElem) {
-          contentElem.remove();
-        }
         break;
       default:
         break;

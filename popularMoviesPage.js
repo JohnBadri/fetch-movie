@@ -3,7 +3,7 @@ import { displayPopularMovies } from './displayPopularMovies';
 
 export async function popularMoviesPage() {
   const container = document.createElement('div');
-  container.classList.add('popular-movies');
+  container.classList.add('popular');
   container.appendChild(createElement('h1', 'Popular Movies'));
 
   const movieDisplay = await displayPopularMovies();

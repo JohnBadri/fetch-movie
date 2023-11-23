@@ -1,13 +1,13 @@
-import { getMovies } from './getMovies.js';
-import { createMovieCard } from './createMovieCard.js';
+import { getMethod } from './getMethod.js';
+import { createCard } from './createCard.js';
 
 export async function displayPopularMovies() {
-  const movies = await getMovies();
+  const movies = await getMethod('https://api.themoviedb.org/3/movie/popular');
   const container = document.createElement('div');
-  container.classList.add('popular-movies-cards');
+  container.classList.add('popular-cards');
   movies.forEach((movie) => {
     container.appendChild(
-      createMovieCard(
+      createCard(
         movie.id,
         movie.poster_path,
         movie.original_title,

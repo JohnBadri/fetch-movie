@@ -1,11 +1,8 @@
 import { doFetchMethod } from '/doFetchMethod.js';
 
-export async function getMovies() {
+export async function getMethod(getLink) {
   try {
-    const response = await fetch(
-      'https://api.themoviedb.org/3/movie/popular',
-      doFetchMethod('GET')
-    );
+    const response = await fetch(getLink, doFetchMethod('GET'));
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);

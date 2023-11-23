@@ -1,3 +1,3 @@
 export default {
-  base: '/fetch-movie/',
+  base: '/fetch-movie-show/',
 };
